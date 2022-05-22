@@ -1,7 +1,9 @@
 module.exports = {
   root: true,
   env: {
+    es2021: true,
     node: true,
+    browser: true,
   },
   extends: [
     "plugin:vue/essential",
@@ -10,10 +12,21 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2021,
+    //ecmaFeatures: {
+    //  jsx: false,
+    //},
   },
   rules: {
+    "no-undef": "off",
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
+    "vue/multi-word-component-names": 0,
   },
 };

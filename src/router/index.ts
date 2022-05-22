@@ -19,6 +19,42 @@ const routes: Array<RouteConfig> = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
+  // {
+  //   path: "/test",
+  //   name: "test",
+  //   component: () => import("../views/NavigationGuard.vue"),
+  // },
+  // {
+  //   path: "/testdom",
+  //   name: "testdom",
+  //   component: () => import("../views/TestDom.vue"),
+  // },
+  {
+    path: "/testui",
+    name: "testui",
+    component: () => import("../views/TestElementUi.vue"),
+  },
+  {
+    path: "/user/list",
+    component: () => import("../views/user/list.vue"),
+  },
+  {
+    path: "/user/edit/:id",
+    name: "/user/edit",
+    component: () => import("../views/user/edit/index.vue"),
+    //props: (route) => ({ id: Number(route.params.id) }),
+  },
+  {
+    path: "/user/confirm",
+    name: "/user/confirm",
+    component: () => import("../views/user/confirm/index.vue"),
+    //props: (route) => ({ id: Number(route.params.id) }),
+  },
+  {
+    path: "/chat",
+    name: "chat",
+    component: () => import("../views/chat/TestChat.vue"),
+  },
 ];
 
 const router = new VueRouter({

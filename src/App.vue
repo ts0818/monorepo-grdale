@@ -1,8 +1,15 @@
+import UserFormEdit from './views/user/edit/index.vue';
 <template>
   <div id="app">
     <nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <!--
+      <router-link to="/testdom">dom</router-link> |
+      -->
+      <router-link to="/testui">UI</router-link> |
+      <router-link to="/user/list">User</router-link> |
+      <router-link to="/chat">Chat</router-link>
     </nav>
     <router-view />
   </div>

@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
+    //"jsx": "react-native",
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
@@ -13,14 +14,19 @@
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
     "sourceMap": true,
-    "baseUrl": ".",
+    "allowJs": true,
+    "checkJs": true,
+    "downlevelIteration": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "baseUrl": "./",
     "types": [
       "webpack-env"
     ],
     "paths": {
       "@/*": [
         "src/*"
-      ]
+      ],
     },
     "lib": [
       "esnext",
@@ -30,6 +36,7 @@
     ]
   },
   "include": [
+    "src/**/*",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
